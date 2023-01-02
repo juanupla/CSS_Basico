@@ -33,8 +33,8 @@ h4 {
     border-radius: 15px;
     border-style: double;
     border: 4px inset #ff0000;
-    box-shadow: 10px 10px 10px 0 #1f4de8;
-    text-shadow: 5px 5px 5px #ff0000;
+    box-shadow: 10px 10px 10px 0 #1f4de8; /*sombra de la caja*/
+    text-shadow: 5px 5px 5px #ff0000; /*sombra de texto*/
     transform: rotate(45deg);
 }
 
@@ -45,6 +45,10 @@ h4 {
     margin: auto;
     border: 7px solid #1f4de8;
     box-sizing: border-box;
+    position:relative;
+    z-index:1; /*el z-index funciona solo si las demas cajas estan posicionadas. el ej de caja1 y caja2 están posicionadas, el z-index de ambos es 0, pero como se lee
+        en cascada a la caja2 la dibujaría por encima, salvo cambiar el valor de z-index de caja1 y que suceda al revez
+    */
 }
 /*Position!: static, relative, absolute, fixed, sticky*/
 .Caja2 {
@@ -57,8 +61,41 @@ h4 {
         en border-box el borde se dibujaria dentro de la caja, ocupando el espesor de la linea dentro del tamaño de la caja*/
     outline: 5px solid #4cff00; /*permite remarcar siempre fuera de la caja y no es un objeto como tal (o como el border x ej)*/
 
-    position: relative;
-    top: 10px;
+    position: relative; /*puede ser absoluta-- la relativa mantiene la cajja siempre del mismo tamaño, y en este caso tendra 10px extra hacia arriba por el top, pero no pertenece a la caja*/
+    top: -10px;
     left: 10px;
     /*también existe right and buttom, aunque si estan definidas top y left se ignoraran*/
+}
+
+/*position absolute - cuando usamos esta propiedad deja de guardar el espacio que tenia reservado para esta caja y la que esta abajo "sube" y se ubica en su lugar, o sea, que todo este fragmento quedara por debajo*/
+
+.Caja3 {
+    display:block;
+    width: 450px;
+    height: 450px;
+    background: #284abd;
+    
+    position:absolute;
+    border:4px solid #ff0000;
+}
+.Caja4 {
+    width: 100px;
+    height: 100px;
+    background: #d40707;
+    text-align: center;
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    left:0;
+    bottom:0;
+
+}
+.Caja5 {
+    width: 100px;
+    height: 100px;
+    background: #e2e20d;
+    text-align: center;
+    right:0px;
+    bottom:0;
+    position:absolute; /*para poder usar las cajas dentro de otra contenedora se pueden definir como absolutas y el margen no será el viewport sino la caja contenedora*/
+
 }
