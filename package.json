@@ -1,0 +1,9 @@
+{
+  "name": "jv-primer-script",
+  "version": "0.0.0",
+  "description": "jvPrimerScript",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

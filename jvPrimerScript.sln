@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "jvPrimerScript", "jvPrimerScript.njsproj", "{995453E7-E606-41DF-9519-2088BC3CF70B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8A1013DE-EC91-427A-A0FF-FE972AF41AB3}"
+	ProjectSection(SolutionItems) = preProject
+		jsPrimerScript.html = jsPrimerScript.html
+		Normalize1.css = Normalize1.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{995453E7-E606-41DF-9519-2088BC3CF70B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995453E7-E606-41DF-9519-2088BC3CF70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995453E7-E606-41DF-9519-2088BC3CF70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995453E7-E606-41DF-9519-2088BC3CF70B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB9F8982-A417-4669-935E-9E662EDEC086}
+	EndGlobalSection
+EndGlobal

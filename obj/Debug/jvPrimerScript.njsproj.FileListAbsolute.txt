@@ -1,0 +1,3 @@
+D:\VisualStudio-Proyectos\CSharp\BackUP\jvPrimerScript\obj\Debug\jvPrimerScript.njsproj.AssemblyReference.cache
+D:\VisualStudio-Proyectos\CSharp\BackUP\jvPrimerScript\obj\Debug\jvPrimerScript.njsproj.CoreCompileInputs.cache
+D:\VisualStudio-Proyectos\CSharp\BackUP\jvPrimerScript\bin\Microsoft.NodejsTools.WebRole.dll
