@@ -1,3 +1,6 @@
 D:\VisualStudio-Proyectos\CSharp\BackUP\jvPrimerScript\obj\Debug\jvPrimerScript.njsproj.AssemblyReference.cache
 D:\VisualStudio-Proyectos\CSharp\BackUP\jvPrimerScript\obj\Debug\jvPrimerScript.njsproj.CoreCompileInputs.cache
 D:\VisualStudio-Proyectos\CSharp\BackUP\jvPrimerScript\bin\Microsoft.NodejsTools.WebRole.dll
+C:\EscritorioCremona\Visual-Repositorio\CSS_Basico\obj\Debug\jvPrimerScript.njsproj.AssemblyReference.cache
+C:\EscritorioCremona\Visual-Repositorio\CSS_Basico\obj\Debug\jvPrimerScript.njsproj.CoreCompileInputs.cache
+C:\EscritorioCremona\Visual-Repositorio\CSS_Basico\bin\Microsoft.NodejsTools.WebRole.dll

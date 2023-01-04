@@ -77,6 +77,8 @@ h4 {
     
     position:absolute;
     border:4px solid #ff0000;
+    bottom:0;
+    right:0;
 }
 .Caja4 {
     width: 100px;
@@ -98,4 +100,30 @@ h4 {
     bottom:0;
     position:absolute; /*para poder usar las cajas dentro de otra contenedora se pueden definir como absolutas y el margen no será el viewport sino la caja contenedora*/
 
+}
+
+
+.caja-fixed{
+    position:fixed;  /*fixed es una propiedad que deja fija a la caja donde se la ubique, es como las publicidades en las páginas que tienen un recuadro fijo
+        y que siempre se mantiene en el mismo lugar inluso cuando una baja o sube en la página y se superpone
+        otra propiedad es position:sticky que es muy similar a esta pero ésta sí mantiene un espacio guardado en la pagina(no es como una ventana flotante
+        y no se superpone a los demas componentes)
+    */
+    width:250px;
+    height:250px;
+    background:#c40e0e;
+    top: 0;
+    right:0;
+    
+
+}
+
+.textotexto {
+    
+    display: inline-block;
+    background: #284abd;
+    position: relative;
+    top: 0px;
+    right:0px;
+    box-sizing: border-box;
 }
