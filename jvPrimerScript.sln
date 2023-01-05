@@ -8,7 +8,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8A1013DE-EC91-427A-A0FF-FE972AF41AB3}"
 	ProjectSection(SolutionItems) = preProject
 		CSS.css = CSS.css
+		CSSsegundo.css = CSSsegundo.css
+		CSStercero.css = CSStercero.css
+		cssTercerScript.html = cssTercerScript.html
 		jsPrimerScript.html = jsPrimerScript.html
+		jsSegundoScript.html = jsSegundoScript.html
 		Normalize1.css = Normalize1.css
 	EndProjectSection
 EndProject

@@ -1,0 +1,56 @@
+﻿.texto{
+    padding:20px;
+}
+/*vamos a usar pseudo-elementos  -- solo funcionan en inline-block o en block!!!!!!!*/
+
+.texto::first-line{ /*los cambios solo afectan a la primera linea*/
+    color:blue;
+    font-size:4em;
+}
+.texto::first-letter{ /*los cambios solo afectan a al primera letra*/
+    color:red;
+}
+
+/*placeholder  el que usualmente se suele usar como ATRIBUTO EN HTML para por ej, en un input dejar un texto predeterminado.. luego en css puede llamarse
+ y usar el pseudoelemento ::placeholder para cambiar las propiedades de ese texto. por ej, darle un color
+*/
+
+form{
+    padding:20px;
+    margin: 100px auto;
+    width:50%;
+    background-color:gray;
+    top:50px;
+    display:block;
+}
+input{
+    padding:6px;
+    width:100%;
+    margin-top:30px;
+}
+
+input::placeholder{
+    color : red;
+    background:black;
+}
+
+input::selection{
+    color:#00ff21 /*el selection es similar a placeholder pero el efecto es cuando seleccionamos el texto*/
+}
+
+/*los pseudoelementos after y before no existen en el dom (comprobar que al seleccionar no se va a poder*/
+
+.before::before{
+    font-size:20px;
+    content:"esto aparece antes pa y no se puede seleccionar porque no es parte del dom. usa pseudoelemento before en css cuya propiedad para escribir es content: ' '";
+    background:red;
+}
+.before{
+    background:green;
+}
+
+.before::after{
+    content:". Esto tampoco se puede seleccionar, es un after y no forma parte del dom";
+    background:yellow;
+
+}

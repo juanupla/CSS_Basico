@@ -61,7 +61,7 @@ h4 {
         en border-box el borde se dibujaria dentro de la caja, ocupando el espesor de la linea dentro del tamaño de la caja*/
     outline: 5px solid #4cff00; /*permite remarcar siempre fuera de la caja y no es un objeto como tal (o como el border x ej)*/
 
-    position: relative; /*puede ser absoluta-- la relativa mantiene la cajja siempre del mismo tamaño, y en este caso tendra 10px extra hacia arriba por el top, pero no pertenece a la caja*/
+    position: relative; /*puede ser absoluta-- la relativa mantiene la caja siempre del mismo tamaño, y en este caso tendra 10px extra hacia arriba por el top, pero no pertenece a la caja*/
     top: -10px;
     left: 10px;
     /*también existe right and buttom, aunque si estan definidas top y left se ignoraran*/
@@ -120,10 +120,22 @@ h4 {
 
 .textotexto {
     
+    width:250px;
+    height:200px;
     display: inline-block;
     background: #284abd;
     position: relative;
     top: 0px;
     right:0px;
     box-sizing: border-box;
+    overflow:auto; /*overflow auto nos permite delimitar el texto dentro de la caja si esta tiene un width o height.. si la superase agregaria una barra al costado para scrollear
+                    otra alternativa es overflow:scroll y podra si o si la barra para subir y bajar auque no sea necesario
+                    los mismos se pueden usar en overflow-y & overflow-x que puede aplicar las mismas propiedades pero a cada eje
+    */
+    transition: all 4s; /*lo vemos mas adelante, pero básicamente es lo que tarda de ejecutar el siguiente comando de .textotexto*/
 }
+.textotexto:hover{ /*hover es una pseudoclase que hará lo que indiquemos cuando el cursor pase por encima de la caja*/
+    color:red;
+}
+
+
