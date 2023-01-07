@@ -54,3 +54,109 @@ input::selection{
     background:yellow;
 
 }
+
+/*pseudoelementos! hay una breve descripcion del lado de html (en pantalla)*/
+
+.caja1 {
+    width: 250px;
+    height: 250px;
+    background: #3eff3e;
+    margin: 0 150px 2px;
+    margin-bottom:10px;
+    position:relative;
+}
+
+.caja2 {
+    width: 250px;
+    height: 250px;
+    background: #3eff3e;
+    margin: 0px 150px;
+    box-sizing: content-box;
+    position: relative;
+    transition: width 0.2s, height 0.4s, background 0.7s, border 1s; /*para que cuando se ejecute el .caja2:hover no sea de repente, se genera una transición.- también
+        puede ser transition: 1s y afectará a todos sus componentes por igual
+    */
+}
+
+.caja2:hover{ /*:hover es un pseudoelemento que escucha el elemento cuando el cursor pasa por encima!!*/
+   width: 350px;
+   height: 350px;
+   background:#0d138d;
+   border: 3px solid #eb0e0e;
+}
+
+.boton{
+    width:200px;
+    height:200px;
+    background:#284aa9;
+    font-family:Gabriola;
+    font-size:20px;
+    margin: 15px 150px;
+    transition:0.3s;
+    color:white;
+}
+
+.boton:hover{
+    width:180px;
+    height:180px;
+    background:#10b4aa;
+    color:black;
+}
+
+/*pseudoelemento :link*/
+
+.link1:link{
+    color:red;
+}
+
+.link1:visited{
+    color:black;
+}
+
+/*pseudoelemento :active*/
+
+.active {
+    width: 200px;
+    height: 200px;
+    background: #284aa9;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin: 15px 150px;
+    transition: 0.3s;
+    color: white;
+}
+
+.active:active{
+    background:black;  /*la pseudclae :active solo funcionara cuando se esté haciendo click sobre el elemento y se lo mantenga apretado*/
+}
+
+/*pseudoelemento :focus que básicamente se activa cuando hay foco por parte del usuario en algún elemento. Se utilizan mucho con los inputs*/
+
+.divinput {
+    width: 200px;
+    height: 200px;
+    padding: 10px 10px;
+    background: black;
+    box-sizing: content-box;
+}
+.input{
+    
+    width:150px;
+    background:gray;
+}
+
+.input:focus{
+    background:white
+}
+
+
+/*pseudoelemento :lang(ES) sirve para realizar cambios detectando el idioma. para ello, nosotros del ladode css debemos inluir el atributo
+    lang="esp" por ejemplo, para identificar a ese segmento como español*/
+
+.lang:lang(es){
+    background:#284aa9;
+}
+
+.lang2:lang(en) {
+    background: #bfab0e;
+}
