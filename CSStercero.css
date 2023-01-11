@@ -160,3 +160,34 @@ input::selection{
 .lang2:lang(en) {
     background: #bfab0e;
 }
+
+/*vamos a ver para qué sirve le object-fit: 
+    que pueden ser fil, contain, cover , none, scale-down
+*/
+
+.cont{
+    width: 500px;
+    height: 350px;
+}
+
+.cont img{
+        width: 100%;
+        height: 100%;
+        border: 3px solid blue;
+        object-fit: cover; /*el cover usara todo el tamaño de la caja pero sin distorsionar la imagen, solo hara zoom y recortará los bordes. se ajusta al contenido*/
+}
+
+.contenedor{
+    width:500px;
+    height: 350px;
+    display: inline-block;
+}
+
+.contenedor img{
+    width: 100%;
+    height: 100%;
+    border: 3px solid red;
+    object-fit: contain; /*el containt ajustara la imagen dejando su resolucion y por ende dejara margenes en nuesto contenedor*/
+}
+/* none usa el tamaño por defecto*/
+
