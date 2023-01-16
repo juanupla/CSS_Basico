@@ -1,0 +1,84 @@
+﻿
+/*responsive design*/
+
+/*prestar atención a la etiqueta meta que se agrego del lado de html, la etiqueta viewport.. que es de las resoluciones originales del celular
+    se puede comprobar con f12 en chrome -> dispositivos. y se consigue buscando etiqueta html viewport en google
+*/
+
+/*también estará la etiqueta script para utilizar iconos! esto se consigue en google: font awesome */
+
+
+
+@media only screen and (max-width: 1200px){ /*las cajas se pondran al lado, solo si despues de la primera caja hay más de 1200px*/
+    div{
+        display:block;
+    }
+}
+
+.nav__responsive-ul{ /*el nav__responsive-ul está oculto y el nav__ul se mostrará hasta que modifiquemos otros aspectos*/
+    display:none;
+}
+
+nav {
+    background: #329cb4;
+
+    height: auto;
+    box-sizing:border-box;
+}
+
+.nav__li {
+    background: #2b9c84;
+    display: inline-block;
+    color: white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin:0px 30px 0px 30px;
+}
+
+.nav__li a {
+        text-decoration: none;
+        color: white;
+        margin:70px;
+       
+}
+
+.nav__li i{
+    width:30px;
+    text-align:left;
+    margin-right:1px;
+}
+
+.nav__li:hover > a{ /*así es la iteración cuando utilizo una pseudoclase y necesito que afecte a una etiqueta que contiene y no a todo*/
+    color:black;
+}
+
+.nav__li:hover > i {
+        color: black;
+}
+
+
+
+
+@media only screen and (max-width:1330px) {
+    .nav__li{
+        display:none;
+    }
+    .nav__responsive-ul{
+        display:block;    /*cuando las resoluciones del nav sean menor a 1330px se desactivara la lista del nav__ul y se activara la lista nav__responsive-ul*/
+        position:absolute;
+        width:100%;
+        background-color:#69c;
+    }
+    .nav {
+        height: 37px;
+        width: 100%;
+        background-color: #48e;
+    }
+}
+
+.nav__responsive-buttom{
+    float:right;
+    font-size: 20px;
+    padding: 6px;
+}

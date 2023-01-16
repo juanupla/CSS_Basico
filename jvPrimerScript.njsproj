@@ -29,6 +29,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="Normalize1 - Copy.css" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>

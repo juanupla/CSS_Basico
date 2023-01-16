@@ -63,8 +63,9 @@ input::selection{
     background: #3eff3e;
     margin: 0 150px 2px;
     margin-bottom:10px;
-    position:relative;
+
 }
+
 
 .caja2 {
     width: 250px;
@@ -168,6 +169,7 @@ input::selection{
 .cont{
     width: 500px;
     height: 350px;
+    cursor:pointer; /*explica mas adelante*/
 }
 
 .cont img{
@@ -175,6 +177,7 @@ input::selection{
         height: 100%;
         border: 3px solid blue;
         object-fit: cover; /*el cover usara todo el tamaño de la caja pero sin distorsionar la imagen, solo hara zoom y recortará los bordes. se ajusta al contenido*/
+        object-position: left; /*explicación mas abajo.. (la imagen se ajusta en la izquierda y recorta mas en la derecha - probar comentando esta propiedad y ver el cambio)*/
 }
 
 .contenedor{
@@ -189,5 +192,33 @@ input::selection{
     border: 3px solid red;
     object-fit: contain; /*el containt ajustara la imagen dejando su resolucion y por ende dejara margenes en nuesto contenedor*/
 }
-/* none usa el tamaño por defecto*/
+/* none usa el tamaño por defecto. colocará la imagen con las resoluciones reales... y otro es el scale-down que ajusta la imagen según cómo lo crea 
+    conveniente. 
+*/
 
+/*también existe una propiedad que está mas arriba que es object-position 
+    las cuales pueden ser right, left, top, buttom.. usando estas si elegimor left y además tenemos un object-fin: cover, ese zoom que hará poara ajustar la imagen
+    recortara mas del  lado derecho y se verá bien claro la parte izquierda de la imagen, en este caso.
+
+    también puede ser px, o em en la definicion de object-position.. 
+*/
+
+/*vemos ahora la propiedad cursor: , lógicamente modifica en cursor según lo que se defina en esa propiedad
+    muy utilizadas en las cajas contenedoras, que al pasar por encima de ellas modifica el cursor. También muy utilizadas con las
+    cajas y la pseudoclase :active que ejecutará la modificacion únicamente cuando se este haciendo click
+*/
+
+.cont:active{
+    cursor:default;
+}
+
+/*nota: existe una definicion para las propiedades de colores, como background: .. que se llama  rgb(0,0,0) 
+    podemos definir colores´segun deseamos, mesclando 3 colores rgb-> red, green, blue
+    ej: background-color: rgb(134,45,88) la escala es de 0 a 255
+    también exíste rgba(0,0,0,0.5) agrega el último parametro donde defina la opacidad
+*/
+
+
+
+
+/*hasta acá llegamos. en cssCuarto empezamos con responsive design - Mobile first*/
