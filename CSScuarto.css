@@ -19,9 +19,8 @@
     display:none;
 }
 
-nav {
-    background: #329cb4;
-
+nav{
+    background: #2b9c84;
     height: auto;
     box-sizing:border-box;
 }
@@ -34,6 +33,7 @@ nav {
     box-sizing: border-box;
     padding: 10px;
     margin:0px 30px 0px 30px;
+   
 }
 
 .nav__li a {
@@ -58,27 +58,66 @@ nav {
 }
 
 
-
-
+.nav__responsive-buttom-container {
+    position: relative;
+    width: 100%;
+    font-size: 20px;
+ /*001 el contenedor empieza 100px antes por eso al .nav__responsive-ul le doy un padding-top:100px*/
+    z-index: 50;
+}
+.nav__responsive-buttom {
+    padding: 6px 20px;
+    text-align: right;
+    width: 100%;
+    background-color: #135689;
+}
 @media only screen and (max-width:1330px) {
     .nav__li{
         display:none;
     }
-    .nav__responsive-ul{
-        display:block;    /*cuando las resoluciones del nav sean menor a 1330px se desactivara la lista del nav__ul y se activara la lista nav__responsive-ul*/
-        position:absolute;
-        width:100%;
-        background-color:#69c;
-    }
-    .nav {
-        height: 37px;
+
+    nav{
         width: 100%;
-        background-color: #48e;
+    }
+
+    .nav__responsive-ul {
+        display: block; /*cuando las resoluciones del nav sean menor a 1330px se desactivara la lista del nav__ul y se activara la lista nav__responsive-ul*/
+        position: absolute; /*presta atención donde esta ubicado absolute y donde relative! en este caso con .nav__responsive-ul & .nav__responsive-li, o sea,el contenedor y su contenido.. ahí esta el truco*/
+        width: 100%;
+        height:5px;
+        background-color: white;
+/*001 lo que anteriormente está comentado lo elimine, pero es bueno saberlo*/
+        padding-bottom:0;
+    }
+
+    .nav__responsive-li {
+        position: relative;
+        width: 100%;
+        padding: 9px 20px;
+        top: -1000px;
+        transition: 0.5s;
+        z-index: 1;
+        background: #69c;
+        
+    }
+
+    .nav__responsive-li > i {
+            width: 30px;
+            text-align: left;
+            margin-right: 1px;
+    }
+
+    .nav__responsive-li > a {
+            text-decoration: none;
+            color: black;
+    }
+
+    .nav__responsive-ul:hover > .nav__responsive-li {
+        top: 0px;
+    }
+    .jr25{
+        padding-bottom: 700px;
     }
 }
 
-.nav__responsive-buttom{
-    float:right;
-    font-size: 20px;
-    padding: 6px;
-}
+/*fin de un nav con css. tener en cuenta que son conocimentos básicos para entender la herramienta. Muchas cosas son más óptimas con js que vas a ver mas adelante*/
