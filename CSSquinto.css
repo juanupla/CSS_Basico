@@ -1,0 +1,22 @@
+﻿/*empezamos a ver display: flex*/
+
+.flex-container{
+    display:flex;
+}
+
+.flex-item{
+    background: #48e;
+    color:#ffffff;
+    padding :10px;
+    margin: 5px;
+    height: 70px;
+    overflow:auto;
+
+}
+
+/*un dato importante es que display flex siempre tenderan a mantener la misma altura. (POR DEFECTO)
+    por ej, si dentro de un contenedor tenemos otros 2, y uno tiene mas texto que el otro, entonces una caja(la de menor contenido) tendra un width mas chico y la otra caja
+    un width mas grande. pero la altura sera siempre la misma ya que las cajas se ajustan al contenido
+
+    sin embargo, esta disposicion POR DEFECTO se puede modificar a travez 
+*/

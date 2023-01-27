@@ -8,8 +8,10 @@
 /*también estará la etiqueta script para utilizar iconos! esto se consigue en google: font awesome */
 
 
-
-@media only screen and (max-width: 1200px){ /*las cajas se pondran al lado, solo si despues de la primera caja hay más de 1200px*/
+.nav__ul{
+    margin:0;
+}
+@media only screen and (max-width: 1200px) { /*las cajas se pondran al lado, solo si despues de la primera caja hay más de 1200px*/
     div{
         display:block;
     }
