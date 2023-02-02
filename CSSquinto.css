@@ -12,30 +12,33 @@
 .flex-container {
     height: 50vh;
     display: flex;
-    /*flex-direction:row; está por defecto. */
-    /*   flex-direction:column;*/ /*misma propiedades en vertical*/
-    /* flex-direction:row-reverse;*/ /*las cajas aparecen de derecha a izquierda, */
-    /*   flex-direction:column-reverse;*/ /*las cajas aparecen de abajo hacia arriba*/
+    /*flex-direction:row;*/                    /* está por defecto. */
+    /*   flex-direction:column;*/              /*misma propiedades en vertical*/
+    /* flex-direction:row-reverse;*/           /*las cajas aparecen de derecha a izquierda, */
+    /*   flex-direction:column-reverse;*/      /*las cajas aparecen de abajo hacia arriba*/
 
-/*    flex-wrap: wrap;*/ /* flex-wrap:wrap; funciona para que las cajas NO sean mas sensibles(sen encojen al achicar la pantalla) te va a tirar las cajas abjo cuando no tenga mas resoulción... wrap-reverse es similar
+
+
+    flex-wrap: wrap;         /* flex-wrap:wrap; funciona para que las cajas NO sean mas sensibles(o sea, se encojen al achicar la pantalla) te va a tirar las cajas abjo cuando no tenga mas resoulción... wrap-reverse es similar
         nada mas que en lugar de ir tirando las cajas hacia abajo, lo hará hacia arriba
     */
 
-    /*    justify-content:center;  centra las cajas contenidas*/
-    /*justify-content:space-around;*/ /*es como el margin:auto; en el contenido.. separa las cajas lo que mas puede, de manera pareja. aunque en los bordes parecera mas chico, es porque no estan entre cajas */
-    /*justify-content:space-between; */ /*funciona para dejar el mayo espacio posible entre cajas, es decir, pegado al borde estará la caja 1 y entre las cajas dividira el espacio*/
-    justify-content: space-evenly; /*dará margen entre las cajas y entre los bordes también, de manera ´proporcional*/
 
 
-   /* align-items:stretch;*//*es la que viene por defecto*/
+    /*    justify-content:center;*/        /*centra las cajas contenidas*/
+    /*justify-content:space-around;*/      /*es como el margin:auto; en el contenido.. separa las cajas lo que mas puede, de manera pareja. aunque en los bordes parecera mas chico, es porque no estan entre cajas */
+    /*justify-content:space-between; */    /*funciona para dejar el mayo espacio posible entre cajas, es decir, pegado al borde estará la caja 1 y entre las cajas dividira el espacio*/
+    justify-content: space-evenly;         /*dará margen entre las cajas y entre los bordes también, de manera ´proporcional*/
 
-    /*align-items: center;*/ /*align-item se usa para posicionar a los items en el cross axis!! Pero OJO, afecta a los items por linea...*/
-    /*align-items:flex-start*/ /*posiciona arriba en el cross axis*/
-    /*align-items:flex-end*/ /*posiciona abajo en el cross axis*/
+
+    /* align-items:stretch;*/      /*es la que viene por defecto*/
+    /*align-items: center;*/       /*align-item se usa para posicionar a los items en el cross axis!! Pero OJO, afecta a los items por linea...*/
+    /*align-items:flex-start*/     /*posiciona arriba en el cross axis*/
+    /*align-items:flex-end*/       /*posiciona abajo en el cross axis*/
 
     /*si mis items van a ocupar mas de una linea en lugar de align-item usaremos align-content!*/
-    align-content:flex-start;/**/ /*similares propiedades que el anterior*/
-
+    align-content:center;/**/ /*similares propiedades que el anterior*/
+    margin: 
 }
 
 .flex-item {
@@ -45,11 +48,17 @@
     margin: 5px;
     height: 120px;
     overflow: auto;
-    flex-basis: 120px; /*funciona como un width pero este es espesificamente una propiedad del ELEMENTO flexible; es más importante*/
-    flex-grow: 1; /*propiedades de los ELEMENTOS flexibles. flex grow utiliza el espacio disponible y lo reparte entre las CAJAS, mayor numero mayor espacio recibirá ese item cuando se modifiquen resoluciones.
+    flex-basis: 120px;     /*funciona como un width pero este es espesificamente una propiedad del ELEMENTO flexible; es más importante*/
+    flex-grow: 5;          /*propiedades de los ELEMENTOS flexibles. flex grow utiliza el espacio disponible y lo reparte entre las CAJAS, mayor numero mayor espacio recibirá ese item cuando se modifiquen resoluciones.
         es posible tambien darle esta propiedad a un (o unos) y no a todos
     */
-    flex-shrink:0.5; /*esta es una propiedad de los elementos flexibles de definir cuánto espacio van a ceder cuando se achiquen las resoluciones.- tambien puede ser 0.5 e invierte el sentido*/
+    flex-shrink: 0.5;      /*esta es una propiedad de los elementos flexibles de definir cuánto espacio van a ceder cuando se achiquen las resoluciones.- tambien puede ser 0.5 e invierte el sentido*/
+    /*en lugar de usar los 3 anteriores de puede usar solo flex: grow shrink basis - en ese orden! para abreviar*/
+
+
+    order: 10;             /*el order (parece a un z-index que solo funciona como elemento flexible. lo que hará es poner al elemento mas grande en direccion del main-axis
+        esto quiere decir, que también puede ser utilizado de manera vertical¿cómo? alterando en el contenedor de las cajas flexibles el flex-direction!
+    */
 }
 
 .flex-item1 {
@@ -105,9 +114,11 @@
     height: 120px;
     overflow: auto;
     flex-basis: 120px;
-    flex-grow: 1; /*propiedades de los ELEMENTOS flexibles. flex grow utiliza el espacio disponible y lo reparte entre las CAJAS, conservando un width variable pero de las mismas proporciones entre en width de las cajas*/
+    flex-grow: 1;
 }
 
 .loco{
     align-self:center; /*propiedades de los ELEMENTOS flexibles. esta propiedad no funcionará si en la caja contenedora estan align-conten o item, es decir, alineados en el cross axis...- */
 }
+
+/*hasta acá ejemplo básico de las cajas flex y sus elemenots flexibles. En el próximo mesclamos un poco de flex con otras propiedades para dar un estilo determinado..*/
