@@ -39,10 +39,9 @@ nav{
 }
 
 .nav__li a {
-        text-decoration: none;
-        color: white;
-        margin:70px;
-       
+    text-decoration: none;
+    color: white;
+    margin:70px;    
 }
 
 .nav__li i{

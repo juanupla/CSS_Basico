@@ -45,6 +45,7 @@ input::selection{
     content:"esto aparece antes pa y no se puede seleccionar porque no es parte del dom. usa pseudoelemento before en css cuya propiedad para escribir es content: ' '";
     background:red;
 }
+
 .before{
     background:green;
 }
