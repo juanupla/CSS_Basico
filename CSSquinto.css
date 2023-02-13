@@ -38,7 +38,7 @@
 
     /*si mis items van a ocupar mas de una linea en lugar de align-item usaremos align-content!*/
     align-content:center;/**/ /*similares propiedades que el anterior*/
-    margin: 
+    /*margin: */
 }
 
 .flex-item {

@@ -13,9 +13,9 @@ alert("Hola " + nombre + "!");
 document.write("Hola " + nombre + "! Este es un mensaje document.write ");
 
 var nombrecompleto;
-var apellido = "cremona";
+var apellido = "Cremona";
 
-nombrecompleto = ` Hola ${nombre} ${apellido}  Esto es otro texto concatenado con atributos mediante $ {} `;
+nombrecompleto = `- Hola ${nombre} ${apellido}... Esto es otro texto concatenado con atributos mediante $ {} -`;
 document.write(nombrecompleto);
 
 var dineroCofla = prompt("cuánto dinero tiene cofla?");
@@ -41,5 +41,9 @@ for (rj = 0; rj < Array.length; rj++) {
     else {
         alert("No te alcanza pa nada pa")
     }
+}
+
+for (i of Array) { /*en un ciclo for de estas caracteristicas cuando usamos el for "in" nos devolverá la posicion de los elementos. Cuando usemos for "of" nos devolverá el valor de los elementos */
+    document.write("<br>" + i)
 }
 

@@ -1,0 +1,43 @@
+﻿body
+{
+    background:radial-gradient(circle,#fff,#333);
+    padding:15px;
+    height:100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 150px 150px 1fr; /*o se puede escribir en la propiedad repeat(3,150px) 1fr; para abreviar*/
+    grid-template-columns: 150px 150px 1fr; /*el fr funciona muy similar a un flex-growth*/
+/*    grid-auto-rows:auto;*/
+/*    grid-auto-columns:auto;*/
+    grid-gap: 10px; /* también existe el grid-colum-gap y el grid-row-gap*/
+    background-color:#666;
+    height:100%;
+}
+
+.grid-item{
+    border: 3px solid #000;
+
+}
+
+.grid-item:first-child{  /*:first-child se utiliza para afectar al primer elemento que contiene una caja con display:grid*/
+    background:radial-gradient(circle,#ff0000,#fff);
+    grid-column:1/3; /*el primer espacio ocupará el espacio de 3 celdas de la fila, auque empujará esas celdas... va desde 1 a 3*/
+    grid-row:1/ 3;   /*el primer espacio ocupará el espacio de 2 celdas de la columna, auque empujará esas celdas */
+}
+
+.grid-item:nth-child(2){
+    background:#f68a3e;
+    grid-column: 3/4;;
+     grid-row:1/3; 
+
+}
+
+.grid-item:nth-child(3){
+    background:#289063;
+    grid-column:1/3;
+}
+
+/*empezando con grid implicito */
+
