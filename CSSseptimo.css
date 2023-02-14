@@ -2,18 +2,20 @@
 {
     background:radial-gradient(circle,#fff,#333);
     padding:15px;
-    height:100vh;
+/*    height:100vh;*/
 }
 
 .grid-container {
     display: grid;
-    grid-template-rows: 150px 150px 1fr; /*o se puede escribir en la propiedad repeat(3,150px) 1fr; para abreviar*/
-    grid-template-columns: 150px 150px 1fr; /*el fr funciona muy similar a un flex-growth*/
+    grid-template-rows: 150px 150px 150px /*1fr*/; /*o se puede escribir en la propiedad repeat(3,150px) 1fr; para abreviar*/
+    grid-template-columns: 150px 150px 150px/*1fr*/; /*el fr funciona muy similar a un flex-growth*/
 /*    grid-auto-rows:auto;*/
 /*    grid-auto-columns:auto;*/
-    grid-gap: 10px; /* también existe el grid-colum-gap y el grid-row-gap*/
+    /*grid: 10px;*/ /* también existe el grid-colum-gap y el grid-row-gap*/
     background-color:#666;
     height:100%;
+
+
 }
 
 .grid-item{
@@ -41,3 +43,10 @@
 
 /*empezando con grid implicito */
 
+.grid-container {
+    /*grid-auto-columns: 100px; */ /*del espacio nulo de las celdas*/
+    grid-auto-flow: row; /*orden de la grilla column - row*/
+    grid-auto-rows: 100px; /*del espacio nulo de las celdass*/
+}
+
+  
