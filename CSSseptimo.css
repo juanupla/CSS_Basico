@@ -46,7 +46,7 @@
 .grid-container {
     /*grid-auto-columns: 100px; */ /*del espacio nulo de las celdas*/
     grid-auto-flow: row; /*orden de la grilla column - row*/
-    grid-auto-rows: 100px; /*del espacio nulo de las celdas*/
+    grid-auto-rows: 100px; /*del espacio nulo de las celdass*/
 }
 
   
