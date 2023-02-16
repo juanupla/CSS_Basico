@@ -8,14 +8,18 @@
 .grid-container {
     display: grid;
     grid-template-rows: 150px 150px 150px /*1fr*/; /*o se puede escribir en la propiedad repeat(3,150px) 1fr; para abreviar*/
-    grid-template-columns: 150px 150px 150px/*1fr*/; /*el fr funciona muy similar a un flex-growth*/
-/*    grid-auto-rows:auto;*/
-/*    grid-auto-columns:auto;*/
+    grid-template-columns: 150px 150px 150px /*1fr*/; /*el fr funciona muy similar a un flex-growth*/ 
+        /*tambien se puede usar en c/u el min-conten,max content -> estos hacen que la celda
+        en el caso del min siempre se ajuste (en el caso de un texto) a la palabra mas larga, el tendera a que la celda ocupe el maximo contenido posible
+        también esta el minmax(100px,300px) o minmax(100px,1fr) el cual ajusta por minimos y maximos a la celda
+        también existe la posibilidad de utilizar combinando: repeat(auto-fill, minmax(100px,150px)) auto-fill ira agregando columa a medida que cambien las resoluciones;
+        repeat(auto-fit, minmax(100px,150px)) autofit extendera el tamaño de las celdas en funcion de como cambien las resoluciones!
+        */
+    /*grid-auto-rows:auto;*/
+    /*grid-auto-columns:auto;*/
     /*grid: 10px;*/ /* también existe el grid-colum-gap y el grid-row-gap*/
-    background-color:#666;
-    height:100%;
-
-
+    background-color: #666;
+    /*height: 100%;*/
 }
 
 .grid-item{
@@ -31,22 +35,46 @@
 
 .grid-item:nth-child(2){
     background:#f68a3e;
-    grid-column: 3/4;;
-     grid-row:1/3; 
+    grid-column: 3/4;
+    grid-row:1/3; 
 
 }
 
 .grid-item:nth-child(3){
     background:#289063;
     grid-column:1/3;
+/*    order:3;
+    justify-self:end;*/
 }
 
 /*empezando con grid implicito */
 
 .grid-container {
     /*grid-auto-columns: 100px; */ /*del espacio nulo de las celdas*/
-    grid-auto-flow: row; /*orden de la grilla column - row*/
+    grid-auto-flow: row; /*orden de la grilla column - row y tambien existe dense, que sirve para reacomodar los espacios vacios en una grilla*/
     grid-auto-rows: 100px; /*del espacio nulo de las celdass*/
 }
 
-  
+/*alineacion y control de flujo*/
+
+.grid-container{
+    justify-content:end; /*alinea grilla en el main axis*/
+    align-content:end; /*alinea grilla en el cross axis*/
+    height:100vh;
+    align-items:end; /*afecta a los items*/
+    justify-items:start;/*afecta a los items */
+}
+.grid-item{
+    padding:50px;
+}
+.grid-item:nth-child(8){
+    justify-self:end; /*presta atencion que va en el item. self*/
+    background:#fff;
+
+}
+.grid-item:nth-child(9){
+    justify-self:start;
+        background:#fff;
+}
+
+
