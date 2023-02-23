@@ -1,0 +1,67 @@
+﻿
+/*Responsive desing*/
+
+/*2 conceptos importantes: mobile first refiere al desarrollo desde dispositivos mobiles adaptandolos hacia dispositivos mas grandes como tablet, escitorio,etc. de resoluciones pequeñas a mas grandes
+    y mobile desktop refiere a todo lo contrario anteriormente mencionado
+
+    Dato: lo mas recomendado cuando trabajemos con Responsive desing es utilizar mobile first
+*/
+
+
+/*ahora vemos TRANSITION*/
+
+body
+{
+    background:#a6a4bd;
+}
+
+.container {
+    padding: 20px 5px;
+    background: linear-gradient(to bottom,#fff,#86f);
+    display: flex;
+    flex-direction:column;
+
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    background: #025;
+    transition-property: background, left; /*con el temino all podemos afectar a todos los componentes que van a cambiar, pero de no ser necesario debe evitarse y definir la propiedad que vamos a afectar
+        para reducir el consumo de recursos.
+    */
+    transition-duration: 1.4s, 2s; /*duración de la transición. Si hay mas de una propiedad, podemos definir la duracion de todos con un solo o podemos darle una duracion a cada propiedad*/
+    transition-delay: 1s; /*duracion ANTES de que empiece la transición*/
+    margin: 30px;
+    position: relative;
+    left: 0; /*esta no es una buena práctica, solo para probar los transition-timing-function*/
+
+    border: solid 1px #333;
+}
+.container:hover > .caja {
+    background: #fff;
+    left: 80%; /*esta no es una buena práctica, solo para probar los transition-timing-function*/
+}
+
+/*transition-timing-function todas llegaran a destino en el mismo tiempo que indicamos en el transition-duration, nada más que varian en su comportamiento. veamos..*/
+
+.caja:first-child{
+    transition-timing-function:linear; /*secuencia lineal (constante) */
+}
+
+.caja:nth-child(1){
+    transition-timing-function:ease; /*secuencia que será "lento" al final y rápido sobre el principio*/
+}
+
+.caja:nth-child(2){
+    transition-timing-function:ease-in; /*secuencia que tiene alta velocidad al principio y termina despacio*/
+}
+
+.caja:nth-child(3) {
+    transition-timing-function: ease-out; /*secuencia que arranca rapido y temina despacio, parecido al ease pero no es tan brusco*/
+}
+
+.caja:nth-child(4) {
+    transition-timing-function: ease-in-out; /*secuencia que será más solo entre medio del principio y el final*/
+}
+
