@@ -7,28 +7,32 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "jvPrimerScript", "jvPrimerS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8A1013DE-EC91-427A-A0FF-FE972AF41AB3}"
 	ProjectSection(SolutionItems) = preProject
+		CCSDecimotercerScript.html = CCSDecimotercerScript.html
 		CSS.css = CSS.css
+		CCSdecimosegundo.css = CCSdecimosegundo.css
 		CSScuarto.css = CSScuarto.css
 		CSSCuartoScript.html = CSSCuartoScript.html
 		CSSdecimo.css = CSSdecimo.css
 		CSSDecimoScript.html = CSSDecimoScript.html
+		CSSdecimoprimero.css = CSSdecimoprimero.css
+		CSSDecimoprimerScript.html = CSSDecimoprimerScript.html
+		CSSdecimotercero.css = CSSdecimotercero.css
 		CSSnoveno.css = CSSnoveno.css
+		CSSDecimosegundoScript.html = CSSDecimosegundoScript.html
 		CSSNovenoScript.html = CSSNovenoScript.html
 		CSSoctavo.css = CSSoctavo.css
 		CSSOctavoScript.html = CSSOctavoScript.html
-		CSSonceavo.css = CSSonceavo.css
-		CSSOnceavoScript.html = CSSOnceavoScript.html
+		CSSPrimerScript.html = CSSPrimerScript.html
 		CSSquinto.css = CSSquinto.css
 		CSSQuintoScript.html = CSSQuintoScript.html
 		CSSsegundo.css = CSSsegundo.css
+		CSSSegundoScript.html = CSSSegundoScript.html
 		CSSseptimo.css = CSSseptimo.css
 		CSSSeptimoScript.html = CSSSeptimoScript.html
 		CSSsexto.css = CSSsexto.css
 		CSSSextoScript.html = CSSSextoScript.html
 		CSStercero.css = CSStercero.css
 		cssTercerScript.html = cssTercerScript.html
-		jsPrimerScript.html = jsPrimerScript.html
-		jsSegundoScript.html = jsSegundoScript.html
 		Normalize1.css = Normalize1.css
 	EndProjectSection
 EndProject

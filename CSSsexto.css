@@ -36,7 +36,7 @@ body{
     resize:none; /*esta propiedad es para que el textarea no pueda modificar su tamaño a travez del usuario*/
 
 }
-.form__input::selection {
+.form__input::selection {  /*pseudoelemento para darle efectos al contenido cuando se seleccione... también existe el pseudoelemento placeholder donde podemos definir un content = "lo que quiero q aparezca escrito en el inputo" aunque se suele definir en la etiqueta de html*/
     color: #4fedae;
 }
 

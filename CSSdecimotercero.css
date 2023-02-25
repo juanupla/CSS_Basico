@@ -1,0 +1,81 @@
+﻿/* Acá vamos a ver variables */
+
+
+:root { /*----variables globales------*/
+    --color-naranja: #f40;   /*si a esta variable la redefino en una etiquita <p> por ej y la uso dentro de las estiquetas p, tendra ese valor redefinido, pero no así para los demas, como dentro de una etiqueta div, que tendra el valor definido en root*/
+}
+
+
+.container, .container2{
+    padding:30px;
+    height:150px;
+    width:150px;
+    margin:30px;
+}
+
+.container{
+    background:var(--color-naranja);
+}
+
+.container2{
+    background:blue;
+}
+
+
+
+/*Acá vamos a ver filtros*/
+
+.container3 img{
+
+    /*--NOTA: si se quiere usar dos o mas filters se deben colocar todas las propiedades en uno solo, tal como en el transform. sino funcionara 1 solo(el último - ver en la página F12)*/
+
+    /*filter:blur(2px);*/                       /*blur desenfoca  -  para estos ej usamos una imagen*/
+    filter:brightness(0.7);                     /*brightness es para el brillo, donde 1 es el brillo normal y lógicamente debajo de ese valor se reduce y por encima se aumenta*/
+    filter:contrast(1.7);                       /*al igual que el anterior 1 es el normal. definimos el contraste*/
+    filter:drop-shadow(10px 10px 10px #000);    /*parecido al box-shadow nada mas que box-shadow ES una propiedad y no un elemento y se usa para las cajas*/
+    filter:grayscale(0);                        /*grayscale es para aplicar escala de grises, donde 0 es el color normal y 1 es totalmente gris*/
+    filter:opacity(0.5);
+}
+
+
+
+
+
+
+
+
+/*------------------------ en ejemplo-------------------------------------*/
+.container4 {
+    filter: contrast(30);
+    background: #fff;
+}
+
+
+.caja{
+    display:inline-block;
+    height:150px;
+    width:150px;
+    background:red;
+    margin:40px;
+    border-radius:50%;
+    filter:blur(20px); /*la esencia de este efecto esta acá*/
+}
+
+
+.caja:first-child{
+    animation: transladar 3s alternate infinite;
+}
+
+@keyframes transladar {
+    0%{
+        transform:translate(0);
+    }
+    100%{
+        transform:translate(160px);
+    }
+}
+
+
+
+
+/*-------------- FIN ----------------*/

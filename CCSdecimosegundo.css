@@ -1,0 +1,67 @@
+﻿
+
+
+/*Vamos a ver transform: 
+
+    Las transformaciones reciben funciones! like: translateX(x) - translateY(y) - translate(x,x-y)
+
+                                                 scaleX(x) - scaleY(y) - scale(xy - x,y)
+
+                                                 rotate(angleUnit) - rotateX(angleUnit) - rotateZ(angleUnit) - rotate3D(angleUnit) | angleUnit = deg - grad - rad - turn la mas común y la que vamos a usar es deg
+
+                                                 skew(angleUnit)
+*/      
+
+body
+{
+}
+
+
+.container {
+    padding: 20px 5px;
+    background: radial-gradient(circle,#fff,#86f);
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    background: #003c96;
+    margin: 30px;
+    display: flex;
+    padding: 5px;
+    color: #fff;
+    transition-property: transform;
+    transition-duration: 4s;
+    /*transform:translateX(100px);*/ /*translateX sirve para desplazarlo en el eje x (como un main-axis)*/
+    /*transform:translateY(100%); */ /*translateX sirve para desplazarlo en el eje y (como un cross-axis)  -  IMPORTANTE: sie en lugar de excpresar en px es en % lo hara segun la dimencion del contenido. En este caso tiene un height de 100px, es decir que si le damos translateY(100%) será igual que decir 100px - esto es muy utilizado en animaciones*/
+    /*transform: translate(100px,30px);*/ /*Este es un shorthand de los 2 anteriores (x,y)*/
+    /*transform: scale(1.2,1.5);*/ /*scale nos sirve para agrandar (o disminuir) el tamaño de las cajas scale(2,2) el primer dos(eje x) multiplica x2 el width y el otro igual x2 pero al height(eje y) IMPORTANTE: este es un shorthand de  scaleX(x) - scaleY(y)*/
+
+    clip-path: polygon(50% 0%, 100% 21%, 83% 40%, 82% 70%, 100% 94%, 50% 100%, 0 82%, 0 66%, 0 43%, 0 22%); /*esto no es del temario, pero es nuevo. Lo mas sencillo para clip-path es buscar un generador en google. podemos sar formas a la caja */
+}
+
+.caja b{
+    margin:auto;
+}
+
+.caja:hover{
+    /*transform: translate(50px)  scale(1.5,1.5);*/ /*2 cosas: se puede definir mas de una funcion en el transform. Otra, estamos combinando transform(tema nuevo) con transition ;) */
+    /*transform:skew(90deg);*/ /*deg son grados.. un circulo dividido en 360 partes, claramente :)  - */
+    transform:rotateY(45deg) ;
+}
+
+
+
+
+/*------Algunas cosas de background que no vi --------*/
+
+.caja2 {
+    height: 300px;
+    width:80%;
+    margin-left:10%;
+    background-image: url("https://static.nationalgeographic.es/files/styles/image_3200/public/01-lion-populations-nationalgeographic_1777804.jpg?w=1900&h=1267");
+    background-size:contain; /*funciona practicamente como objet-fit*/
+    background-position:bottom;
+    background-repeat:no-repeat;
+    background-attachment:fixed; /*esto deja a la imagen como si estuviera detras de la pag y se va mostrando a medida que scrolleamos la página- muy común en las web*/
+}

@@ -1,0 +1,63 @@
+﻿
+
+/*Vamos a ver animaciones con @keyframes  !*/
+
+body {
+    background: #a6a4bd;
+}
+
+.container {
+    padding: 20px 5px;
+    background: linear-gradient(to bottom,#fff,#86f);
+
+   
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    background: #003c96;
+    margin: 30px;
+    position: relative;
+    animation-name: desplazarse; /*si o si hay que darle el nombre el keyframe*/
+    animation-duration: 2s; /*simil a transition*/
+    animation-delay: 1s; /*simil a transition*/
+    /*animation-timing-function: linear;*/ /*simil a transition*/ /*dentro de este, podemos usar la propiedad cubic-bezier*/
+    animation-timing-function: cubic-bezier(.04, 1.48, .8, .14); /*usamos esta curva para definir las distinas velocidades de la animacion en funcion de la posicion. En internet hay muchos 
+        generadores de curvas de brazier, muy útiles.
+    */
+
+    animation-iteration-count: 4; /*definimos la cantidad de veces que se va a repetir la animacion, en cantidades o con la definición infinite*/
+    animation-direction: alternate; /*direccion que va a tomar la animacion como: normal, reverse, alternate(es como un normal y despues un reverse-- va y viene--),y alternate-reverse*/
+    animation-fill-mode: forwards; /*esto (y también la definicion both) nos servira para definir el estado de la caja cuando termine la animacion.. forwards(muy usado) y both se queda con las propiedades cuando finaliza la animacion
+        si la animacion termina con un background rojo, quedara de ese color. Si termina en azul quedará de ese color y asi.. la diferencia entre ambos es que fowards arrancara con el estado
+        inicial de la caja y luego empezara por el 0%-50%-100%, en el caso el both el estado inicial de la caja será 0%, luego 50%-100%. es mucho mas simple identificarlo a la vista
+    */
+    /*animation-fill-mode: both;*/
+
+}
+
+@keyframes desplazarse {
+
+/*    from{
+
+    }
+    to{
+
+    }*/                     /*se puede usar este modelo o el de porcentajes: */
+    
+    0%{
+        background:#ffd800;
+        left:0;
+    }
+
+    50%{
+        background:#ff0000;
+    }
+
+    100%{
+        left:60%;
+        background:#49a52f;
+    }
+
+}
