@@ -10,4 +10,8 @@
 
 10mo {transition}
 
-11avo {keyframes o animaciones}
+10mo-1ro {keyframes o animaciones}
+
+10mo-2do{transform, background(algunas propiedades pendientes)}
+
+10mo-3ro{variables, filtros}
